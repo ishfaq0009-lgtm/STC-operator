@@ -7,9 +7,10 @@ import cookieparser from "cookie-parser";
 import dotenv from "dotenv"
 import MemberRouter from "./Routes/Member.route.js"
 
+
+
  dotenv.config()
 dbconection();
-
 
 
 
@@ -32,9 +33,5 @@ app.use("/",async function(req,res){
   return res.json({success:true,msg:"this is backend working."});
 });
 
-
-app.listen(4000, () => {
-  console.log("Server running on port 4000");
-});
 
 export default app;
