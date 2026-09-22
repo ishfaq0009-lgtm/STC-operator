@@ -7,11 +7,8 @@ import cookieparser from "cookie-parser";
 import dotenv from "dotenv"
 import MemberRouter from "./Routes/Member.route.js"
 
-
-
  dotenv.config()
 dbconection();
-
 
 
 let app = express();
@@ -23,6 +20,7 @@ app.use(cors({
   credentials: true
 }));
 
+
 app.use("/user", userRouter);
 app.use("/Project",ProjectRouter);
 app.use("/members",MemberRouter);
@@ -33,4 +31,7 @@ app.use("/",async function(req,res){
 });
 
 
-export default app;
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
+});
+
