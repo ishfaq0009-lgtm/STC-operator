@@ -1,4 +1,4 @@
-import MemberModel from "../Model/memberModel.js";
+import MemberModel from "../Model/MemberModel.js";
 
 
 
