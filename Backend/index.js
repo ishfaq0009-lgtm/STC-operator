@@ -25,9 +25,11 @@ app.use("/user", userRouter);
 app.use("/Project",ProjectRouter);
 app.use("/members",MemberRouter);
 
-app.use("/",async function(req,res){
-  
-  return res.json({success:true,msg:"this is backend working."});
+app.get("/", async function(req, res) {
+  return res.json({
+    success: true,
+    msg: "this is backend working."
+  });
 });
 
 
